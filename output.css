@@ -1,0 +1,88 @@
+* {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none; }
+
+.main {
+  margin: auto;
+  width: 250px; }
+
+.btn-wrapper {
+  margin: auto;
+  border: solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.btn {
+  display: inline-block;
+  height: 80px;
+  width: 90%;
+  margin: 5px auto;
+  border: solid 1px black;
+  cursor: pointer; }
+  .btn--red {
+    background: #f33; }
+    .btn--red.active {
+      background: #ff9999; }
+  .btn--green {
+    background: #3f3; }
+    .btn--green.active {
+      background: #99ff99; }
+  .btn--blue {
+    background: #33f; }
+    .btn--blue.active {
+      background: #9999ff; }
+  .btn--yellow {
+    background: #ff3; }
+    .btn--yellow.active {
+      background: #ffff99; }
+
+.controller {
+  margin-top: 10px; }
+  .controller div {
+    text-align: center;
+    float: left;
+    margin-right: 3px;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #aaa;
+    font-size: 2em; }
+  .controller .count {
+    content: '--';
+    font-size: 2em;
+    background: black;
+    color: red;
+    font: monospace;
+    width: 20%; }
+  .controller .mode {
+    width: 30%;
+    cursor: pointer; }
+  .controller .restart {
+    width: 40%;
+    cursor: pointer; }
+
+#power {
+  float: clear;
+  height: 20px;
+  width: 40x;
+  background: #444; }
+
+.led {
+  width: 6px;
+  height: 6px;
+  background-color: #32050C;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 2px solid #222;
+  top: -18px; }
+
+/*# sourceMappingURL=output.css.map */
