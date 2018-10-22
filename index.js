@@ -8,11 +8,13 @@ $(document).ready(function () {
   $('.restart').click(gameStart);
   $('#power').click(gameStart);
   $('#power').click(() => {
-    console.log('clicked');
     $('.flip').toggleClass('switch-on');
   });
-  $('.round-btn').click(function(){ 
-    console.log((this)); 
+  $('.mode .round-btn').click(function(){ 
+    $(this).toggleClass('pressed-on'); 
+    $('.led').toggleClass('led-on');
+  });
+  $('.start .round-btn').click(function(){ 
     $(this).toggleClass('pressed-on'); 
   });
 });

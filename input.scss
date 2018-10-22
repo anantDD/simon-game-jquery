@@ -11,7 +11,7 @@ $button-colors: (red: #f33, green: #3f3, blue: #33f, yellow: #ff3);
 
 @mixin pressed-on() {
   border: none;
-  box-shadow: 0px 0px 5px -22px #59f;
+  box-shadow: 0px 0px 0px 2px #555;
 }
 
 * {
