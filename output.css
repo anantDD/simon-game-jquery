@@ -135,6 +135,8 @@ video {
   margin-top: 10px;
   text-align: center; }
   .controller .count .displayCount {
+    font-family: 'Segment7Standard', sans-serif;
+    font-weight: normal;
     background: black;
     color: red;
     border-radius: 10%;

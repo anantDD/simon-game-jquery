@@ -60,6 +60,8 @@ $button-colors: (red: #f33, green: #3f3, blue: #33f, yellow: #ff3);
   text-align: center;
   .count {
     .displayCount {
+      font-family: 'Segment7Standard', sans-serif;
+      font-weight: normal;
       background: black;
       color: red;
       border-radius: 10%;
