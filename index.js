@@ -20,11 +20,37 @@ function startGame(){
   buttonPressArray.push(getNewColor());
   //place an initial value.
   //call function that plays the game for us
+  playGame(buttonPressArray)
 }
 
 function playGame(arr){
+  let x = [getNewColor(), getNewColor(), getNewColor(), getNewColor(),];
+  goThroughPlayedButtons(x);
   
 }
+
+function goThroughPlayedButtons(arr){
+  arr.forEach((color, index)=>{
+    setTimeout(()=>{
+      // unplayAllButtons();
+      console.log(color); 
+      playOneButton(color);
+    }
+      , (index+1)*1000)
+  })
+  // unplayAllButtons();
+}
+
+function playOneButton(color){
+  $('.btn--'+color).addClass('active');
+  setTimeout(()=>{
+    $('.btn--'+color).removeClass('active');
+  }, 1000);
+}
+
+// function unplayAllButtons(){
+//   $('.btn-wrapper .btn').removeClass('active');
+// }
 
 function strictModeToggle() {
   $(this).toggleClass('pressed-on');
