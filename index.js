@@ -3,19 +3,24 @@ const sounds = [
 ]
 
 let gameState = false;
+let strictMode = false;
 let buttonPressArray = [];
+
 $(document).ready(function () {
   $('#power').click(toggleGameState);
-  $('.start').on('click','.active', function () {
-    $(this).toggleClass('pressed-on');
-  });
-  $('.mode').on('click', '.active', function () {
-    $(this).toggleClass('pressed-on');
-    $('.led').toggleClass('led-on');
-  });
-  // let gameInitiated = setInterval(runThroughButtons,1000);
-  // $('.start .round-btn').click();
+  $('.start').on('click','.active', startGame);
+  $('.mode').on('click', '.active', strictModeToggle);
 });
+
+function startGame(){
+  $(this).toggleClass('pressed-on');
+}
+
+function strictModeToggle() {
+  $(this).toggleClass('pressed-on');
+  $('.led').toggleClass('led-on');
+  strictMode = !strictMode;
+}
 
 function toggleGameState() {
   $('.flip').toggleClass('switch-on');
