@@ -1,6 +1,12 @@
 const sounds = [
   'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3',
 ]
+soundsByColor ={
+  red: sounds[0],
+  green: sounds[1],
+  yellow: sounds[2],
+  blue: sounds[3]
+}
 
 let gameState = false;
 let strictMode = false;
@@ -32,13 +38,11 @@ function playGame(arr){
 function goThroughPlayedButtons(arr){
   arr.forEach((color, index)=>{
     setTimeout(()=>{
-      // unplayAllButtons();
       console.log(color); 
       playOneButton(color);
     }
       , (index+1)*1000)
   })
-  // unplayAllButtons();
 }
 
 function playOneButton(color){
