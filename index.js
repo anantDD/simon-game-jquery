@@ -14,6 +14,16 @@ $(document).ready(function () {
 
 function startGame(){
   $(this).toggleClass('pressed-on');
+  // sstart the game
+  //initiate or reinitiate the various arrays
+  buttonPressArray = [];
+  buttonPressArray.push(getNewColor());
+  //place an initial value.
+  //call function that plays the game for us
+}
+
+function playGame(arr){
+  
 }
 
 function strictModeToggle() {
