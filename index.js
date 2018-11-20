@@ -1,11 +1,11 @@
 const sounds = [
-  'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound2.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound3.mp3', 'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3',
+  'sounds/simonSound1.mp3', 'sounds/simonSound2.mp3', 'sounds/simonSound3.mp3', 'sounds/simonSound4.mp3',
 ]
-soundsByColor ={
-  red: sounds[0],
-  green: sounds[1],
-  yellow: sounds[2],
-  blue: sounds[3]
+soundByColor	 ={
+  red: new Audio(sounds[0]),
+  green: new Audio(sounds[1]),
+  yellow: new Audio(sounds[2]),
+  blue: new Audio(sounds[3])
 }
 
 let gameState = false;
@@ -24,7 +24,8 @@ function startGame(){
   //initiate or reinitiate the various arrays
   buttonPressArray = [];
   buttonPressArray.push(getNewColor());
-  //place an initial value.
+  //place an initial va
+  lue.
   //call function that plays the game for us
   playGame(buttonPressArray)
 }
@@ -46,9 +47,10 @@ function goThroughPlayedButtons(arr){
 }
 
 function playOneButton(color){
-  $('.btn--'+color).addClass('active');
+  $('.btn.'+color).addClass('active');
+  soundByColor[color].play();
   setTimeout(()=>{
-    $('.btn--'+color).removeClass('active');
+    $('.btn.'+color).removeClass('active');
   }, 1000);
 }
 

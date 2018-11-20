@@ -46,7 +46,7 @@ $button-colors: (red: #f33, green: #3f3, blue: #33f, yellow: #ff3);
   cursor: pointer; // $colors: (color1: blue, color2: red, color3: green, color4:yellow);
   @each $key,
   $color in $button-colors {
-    &--#{$key} {
+    &.#{$key} {
       background: $color;
       &.active {
         background: lighten($color, 20)

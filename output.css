@@ -114,21 +114,21 @@ video {
   margin: 5px auto;
   border: solid 1px black;
   cursor: pointer; }
-  .btn--red {
+  .btn.red {
     background: #f33; }
-    .btn--red.active {
+    .btn.red.active {
       background: #ff9999; }
-  .btn--green {
+  .btn.green {
     background: #3f3; }
-    .btn--green.active {
+    .btn.green.active {
       background: #99ff99; }
-  .btn--blue {
+  .btn.blue {
     background: #33f; }
-    .btn--blue.active {
+    .btn.blue.active {
       background: #9999ff; }
-  .btn--yellow {
+  .btn.yellow {
     background: #ff3; }
-    .btn--yellow.active {
+    .btn.yellow.active {
       background: #ffff99; }
 
 .controller {
